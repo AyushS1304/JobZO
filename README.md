@@ -12,9 +12,9 @@ It empowers job seekers to browse, search, and apply for their dream jobs, while
 
 ---
 
-## 🖼️ Screenshot
+## 🖼️ Overview
 
-![JobZO Screenshot](./227dfbd0-5ba4-4795-9320-e9416626907a.png)
+<img width="1899" height="872" alt="Image" src="https://github.com/user-attachments/assets/1b75c3e6-e84b-41f9-a6a1-e0b8a315ce7d" />
 
 ---
 
