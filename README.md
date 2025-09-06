@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+# 🚀 JobZO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Description
+**JobZO** is a modern job portal web application designed for recruiters and job seekers.  
+It empowers job seekers to browse, search, and apply for their dream jobs, while providing recruiters a clean interface to post, manage, and track job listings.
 
-Currently, two official plugins are available:
+**JobZO** helps you:
+- Discover opportunities that fit your skills.
+- Post jobs and manage applications.
+- Save jobs you like.
+- Manage hiring status in real time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🖼️ Screenshot
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![JobZO Screenshot](./227dfbd0-5ba4-4795-9320-e9416626907a.png)
 
+---
+
+## ⚡ Key Features
+- ✅ User Authentication using Clerk
+- ✅ Job Listing with Search, Filter by Location & Company
+- ✅ Save / Unsave Jobs
+- ✅ Apply to Jobs
+- ✅ Manage Posted Jobs for Recruiters
+- ✅ Update Hiring Status (Open / Closed)
+- ✅ Delete Posted Jobs
+- ✅ Responsive and Modern UI
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend**: React.js
+- **Backend**: Supabase (Auth, Database, Storage)
+- **Authentication**: Clerk
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+
+---
+
+## ⚙️ API Example
 ```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+import { getJobs, getSingleJob, saveJob, addNewJob } from "@/api/apiJobs";
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+// Fetch job listings
+const jobs = await getJobs(token, { Location: "Delhi", searchQuery: "React" });
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+// View single job details
+const job = await getSingleJob(token, { job_id: 1 });
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+// Save or Remove job from saved list
+await saveJob(token, { alreadySaved: false }, { user_id, job_id, job });
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+// Add a new job (Recruiter)
+await addNewJob(token, null, jobData);
