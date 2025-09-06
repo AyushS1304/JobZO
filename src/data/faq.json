@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is JOBZO?",
+    "answer": "JOBZO is a next-gen job portal that connects top talent with leading employers. It enables companies to post job openings and job seekers to explore, save, and apply for relevant roles. With a sleek design, secure login, and dynamic tools, JOBZO simplifies the hiring process for both parties."
+  },
+  {
+    "question": "How do I post a job on JOBZO?",
+    "answer": "Employers can log in to the JOBZO Recruiter Dashboard and navigate to the 'Post a Job' section. Fill in all job-related details like title, description, location, and requirements. Click 'Publish' to make the job listing live instantly."
+  },
+  {
+    "question": "How can I search for jobs on JOBZO?",
+    "answer": "Job seekers can search for jobs using JOBZO’s Smart Search. Filter by keywords, location, job type, and category to find opportunities that match your preferences on the 'Explore Jobs' page."
+  },
+  {
+    "question": "How do I apply for a job on JOBZO?",
+    "answer": "Click on any job listing that interests you and select 'Apply Now'. Upload your resume, complete any screening questions if needed, and submit your application directly through JOBZO’s interface."
+  },
+  {
+    "question": "Can I save jobs to apply later?",
+    "answer": "Yes, JOBZO allows you to save job listings by clicking the 'Save Job' button. You can revisit your saved jobs anytime under the 'Saved Jobs' section in your profile."
+  },
+  {
+    "question": "How can I track my job applications?",
+    "answer": "Go to your JOBZO profile and open the 'My Applications' tab to track all your submissions. You’ll see real-time updates like Submitted, In Review, Shortlisted, or Rejected."
+  }
+]
