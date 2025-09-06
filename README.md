@@ -10,6 +10,8 @@ It empowers job seekers to browse, search, and apply for their dream jobs, while
 - Save jobs you like.
 - Manage hiring status in real time.
 
+- Website link: https://job-zo.vercel.app/
+
 ---
 
 ## 🖼️ Overview
